@@ -17,6 +17,7 @@ begin
   sleep 1
 
   (1..10).to_a.reverse.each do |s| 
+    puts s
     `say #{s}`
     sleep 1
   end
@@ -25,13 +26,31 @@ begin
 
   puts(start = Time.now)
 
-  parts.each do |part|
+  parts.each_with_index do |part, i|
+    puts "\"#{focus_lines.sample} #{part}\""
     `say #{focus_lines.sample} #{part}`
 
-    if ARGV[0]
-      sleep ARGV[0].to_i
-    else
-      sleep 10
+      case ARGV[0]
+      when /\d+s/
+        puts "time passed: #{((Time.now - start)/60).to_i.to_s} minutes"
+        puts "sleeping #{ARGV[0][0..-2]} seconds"
+        sleep ARGV[0][0..-2].to_i
+        break
+      when /\d+/
+        part_count = parts.length.to_f
+        seconds = ARGV[0].to_f * 60
+
+        seconds_per_part = seconds/part_count
+
+        puts "time passed: #{((Time.now - start)/60).to_i.to_s} minutes"
+        puts "sleeping #{seconds_per_part} seconds"
+        sleep seconds_per_part
+        break
+      else
+        puts "time passed: #{((Time.now - start)/60).to_i.to_s} minutes"
+        puts "sleeping 10 seconds"
+        sleep 10
+      end
     end
   end
 
