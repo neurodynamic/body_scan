@@ -1,6 +1,6 @@
 parts_bottom_up = ['toes','feet','ankles','shins','calves','knees','back of your thighs',
 'front of your thighs','buttocks','back','low back','mid back',
-'upper back','pelvic area','stomach','mid torso','chest','hands',
+'upper back','groin','stomach','mid torso','chest','hands',
 'wrists','inside forearms','outside forearms','elbows','upper arms',
 'shoulders','neck','jaw','cheeks','eyes','forehead','back of the head',
 'top of the head','whole head','whole body']
