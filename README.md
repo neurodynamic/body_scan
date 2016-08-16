@@ -1,3 +1,5 @@
+REQUIRES RUBY 2.3+
+
 A way for your Mac to direct you in a guided body scan meditation.
 
 Run with `ruby body_scan.rb`
