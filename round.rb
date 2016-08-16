@@ -14,7 +14,7 @@ class Round
     'and now your'
   ]
   def initialize(duration, start_at)
-    @parts = start_at&.includes?('top') ? PARTS_TOP_DOWN : PARTS_BOTTOM_UP
+    @parts = start_at&.include?('top') ? PARTS_TOP_DOWN : PARTS_BOTTOM_UP
     @break_length = break_seconds(duration)
   end
 
