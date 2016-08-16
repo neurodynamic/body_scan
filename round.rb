@@ -19,7 +19,7 @@ class Round
   end
 
   def run
-    # count_down
+    count_down
     @start_time = Time.now
     puts "Starting at #{@start_time}"
 
