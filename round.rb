@@ -1,11 +1,11 @@
 class Round
   PARTS_BOTTOM_UP = [
-    # 'toes','feet','ankles','shins','calves','knees','back of your thighs',
+    'toes','feet','ankles','shins','calves','knees','back of your thighs',
     'front of your thighs','buttocks','back','low back','mid back',
-    # 'upper back','groin','stomach','mid torso','chest','hands',
-    # 'wrists','inside forearms','outside forearms','elbows','upper arms',
-    # 'shoulders','neck','jaw','cheeks','eyes','forehead','back of your head',
-    # 'top of your head','whole head','whole body'
+    'upper back','groin','stomach','mid torso','chest','hands',
+    'wrists','inside forearms','outside forearms','elbows','upper arms',
+    'shoulders','neck','jaw','cheeks','eyes','forehead','back of your head',
+    'top of your head','whole head','whole body'
   ]
   PARTS_TOP_DOWN = PARTS_BOTTOM_UP[0..-3].reverse + ['whole body']
   FOCUS_LINES = [
