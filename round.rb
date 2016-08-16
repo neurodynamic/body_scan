@@ -23,7 +23,7 @@ class Round
     @start_time = Time.now
     puts "Starting at #{@start_time}"
 
-    @parts.each_with_index do |part, index|
+    @parts.each do |part|
       give_instruction_for(part)
       print_time_elapsed
       sleep_for_break
